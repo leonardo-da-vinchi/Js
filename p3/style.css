@@ -1,0 +1,149 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My code */
+*{
+box-sizing: border-box;
+}
+html {
+	font-size: 21px;
+    font-family: sans-serif;
+    
+}
+
+body{
+background: #2d4259;
+}
+
+body > header {
+     display: flex;
+     width: 19.36rem;
+     height: 3.14rem;
+     margin: 5rem auto 2rem;
+     background: linear-gradient(180deg, #de8572, #d65e49);
+     text-align: center;
+     color: white;
+     font-weight: bolder;
+     border-radius: 4px;
+}
+
+body > header p {
+margin: auto;
+font-size: 1.4rem;
+}
+
+main {
+	width: 19.36rem;
+	margin: auto;
+	background: white;
+	padding: 1.43rem;
+    border-radius: 4px;
+}
+
+main header {
+	background: linear-gradient(180deg, #5ba037, #7cbe51);
+    display: flex;
+    justify-content: space-around;
+    width: 16.43rem;
+    height: 2.86rem;
+	padding: 0.2857rem;  
+	margin-bottom: 10%;
+    border-radius: 4px;
+}
+
+main header input {
+	position: absolute;
+	clip: rect(0,0,0,0);
+	overflow: hidden;
+}
+
+main header label {
+    color: white;
+    font-weight: 600;
+    width: 49%;
+    text-align: center;
+    line-height: 2.2857rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input:hover+label{
+	background: linear-gradient(180deg, #fefefe, #efefef);
+    color: black;
+}
+
+input:checked+label{
+	background: linear-gradient(180deg, #fefefe, #efefef);
+    color: black;
+}
+
+fieldset {
+display: flex;
+justify-content: center;
+}
+
+fieldset input {
+width: 100%;
+font-size: 1rem;
+border: none;
+border-bottom: 2px solid #d8d8d8;
+padding-bottom: 0.5357rem;
+margin-bottom: 0.7143rem;
+opacity: 0.6;
+}
+
+input[type="submit"] {
+width: 100%;
+height: 2.8571rem;
+margin-top: 1.71rem;
+font-size: 1rem;
+font-weight: 600;
+cursor: pointer;
+}
+
+@media all and (min-width: 2900px) {
+    html {
+    font-size: 1.1vw;
+    }
+}
