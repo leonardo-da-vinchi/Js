@@ -10,7 +10,7 @@
 <body>
    <header>	<p>Welcome</p></header>
    <main>
-          <form action="">	
+          <form action="all.php" method="POST">	
    		<header>
    		        <input type="radio" name="slide" id="famale" checked>
  				<label for="famale">Female</label>
@@ -21,8 +21,8 @@
    				
    		</header>
    		<fieldset>
-   		    <input type="email" placeholder="Email address">
-   		    <input type="password" placeholder="Password">
+   		    <input type="email" name="login"  placeholder="Email address">
+   		    <input type="password" name="password" pattern = "ololo" placeholder="Password">
    		</fieldset>
    		
    		<input type="submit" value="Create Account">
