@@ -8,6 +8,7 @@
     <title>Form</title>
 </head>
 <body>
+   <!--  [0-9]{2}[A-ZА-Я]{3}[#[{]}\^$.|?*+)(]\D{1,4} [\#]{0,1}[\[]{0,1}[\]]{0,1}[\{]{0,1}[\}]{0,1}[\\]{0,1}[\^]{0,1}[\.]{0,1}[\,]{0,1}[\|]{0,1}[\?]{0,1}[\*]{0,1}[\+]{0,1}--> 
    <header>	<p>Welcome</p></header>
    <main>
           <form action="all.php" method="POST">	
@@ -16,13 +17,13 @@
  				<label for="famale">Female</label>
  					
 				<input type="radio" name="slide" id="male">
- 				<label for="male">Male</label>
-
-   				
+ 				<label for="male">Male</label> 				
    		</header>
    		<fieldset>
-   		    <input type="email" name="login"  placeholder="Email address">
-   		    <input type="password" name="password" pattern = "ololo" placeholder="Password">
+   		    <input type="email" name="email"  placeholder="Email address">
+   		    <input type="text" name="login" pattern="[A-Za-z0-9]{3,12}"  placeholder="Login">
+   		    <input type="text" name="password" pattern = "[0-9]{2}[A-ZА-Я]{3}\W{1}[a-zа-я]{0,4}" placeholder="Password">
+   		    <input type="text" name="phone" pattern="[5-9]{1,}"  placeholder="Phone">
    		</fieldset>
    		
    		<input type="submit" value="Create Account">
