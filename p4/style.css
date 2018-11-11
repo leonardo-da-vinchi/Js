@@ -1,0 +1,15 @@
+* {
+padding: 0;
+margin: 0;
+}
+
+header {
+background: url(img/background_head.jpg) no-repeat;
+background-size: cover;
+height: 1000px;
+padding: 6% 12% 0;
+}
+
+header ul{
+list-style: none;
+}
