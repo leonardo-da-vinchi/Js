@@ -1,15 +1,56 @@
 * {
 padding: 0;
 margin: 0;
+box-sizing: border-box;
 }
 
+html {
+font-size: 18px;
+font-family: sans-serif;
+}
+
+nav {
+display: flex;
+justify-content: space-between
+}
 header {
 background: url(img/background_head.jpg) no-repeat;
 background-size: cover;
+color: white;
 height: 1000px;
 padding: 6% 12% 0;
 }
 
 header ul{
 list-style: none;
+    display: flex;
+    height: 3rem;
+    padding-top: 0.5rem;
+}
+
+header img {
+width: 3rem;
+}
+
+header ul a{
+ text-decoration: none;
+display: block;
+ color: white;
+ margin:0 2rem 1.8rem 0;
+padding-top: 0.5rem;
+
+}
+
+header ul a img{
+width: 1rem;
+}
+
+header ul li:nth-child(5) a, header ul li:nth-child(6) a{
+margin: 0;
+padding:0.5rem 0.5rem 0.1rem 0.5rem;
+    
+}
+
+header ul li:nth-child(5), header ul li:nth-child(6) {
+background: #a100ff;
 }
