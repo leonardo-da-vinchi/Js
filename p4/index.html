@@ -4,36 +4,49 @@
     <meta charset="UTF-8">
     <title>Eclipce</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" conttent="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    
-    <header>
-        <nav>
-           <logo><img src="img/logo.svg" alt=""></logo>
-            <ul>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">STUDIO</a></li>
-                <li><a href="#">PRICING</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#"><img src="img/strelka.svg" alt="→"></a></li>
-            </ul>
-        </nav>
+    <div class="first-screen">
         
+        <header>
+           <logo><a href="#"><img src="img/logo.svg" alt=""></a></logo>
+            <nav>
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">STUDIO</a></li>
+                    <li><a href="#">PRICING</a></li>
+                    <li><a href="#">BLOG</a></li>
+                </ul>
+                <a href="#">
+                    <span>Join</span>
+                    <img src="img/strelka.svg" alt="→">
+                </a>
+            </nav>
+        </header>
         
-        <h1>
-        PUSH YOURSELF
-        <p>& YOUR</p>
-        <p>DESIGNS</p>
-        </h1>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa adipisci incidunt totam aperiam provident omnis. In voluptates assumenda enim sapiente pariatur ipsa quis, earum provident tempore repellat, officia ipsum blanditiis. </p>
+        <section class="main-descr">
+            <h1>
+            PUSH YOURSELF
+            <span>& YOUR</span>
+            <span>DESIGN</span>
+            </h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa adipisci <span>incidunt totam aperiam provident omnis. In voluptates assumenda enim sapiente pariatur ipsa quis.</span> </p>
+        
         
         <form action="POST">
-            sdf
+            <select name="design_style" id="select-style">
+                <option value="0" selected disabled>Design style</option>
+                <option value="white">white</option>
+                <option value="dark">dark</option>
+                <option value="brown">brown</option>
+            </select>
             <input type="email" required placeholder="Email">
-            <input type="submit">
+            <button type="submit"><img src="img/strelka.svg" alt=""></button>
         </form>
-    </header>
+        </section>
+    </div>
+
     
 <!--
     <main>
