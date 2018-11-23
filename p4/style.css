@@ -176,13 +176,13 @@ position: relative;
     background: url(img/background_sec-1.jpg);
 padding: 0 25%;
 }
-.sec-1 h2 {
 
+.sec-1 h2 {
 margin-bottom: 2%;
 }
 
 .sec-1 p{
-
+margin-bottom: 4rem;
 }
 
 .sec-1 .contactus {
@@ -212,7 +212,10 @@ margin: auto;
 border-radius: 50%;
 }
 
-.sec-1 img[alt="strelka"] {
+.sec-1 img[alt="strelka"], .sec-2 img[alt="strelka"] {
+width: 2rem;
+margin-top: 2.5rem;
+} {
 width: 2rem;
 margin-top: 2.5rem;
 }
@@ -227,8 +230,12 @@ margin: auto;
 border-radius: 50%;
 }
 
+.sec-1 .content > img {
+position: relative;
+bottom: -5px;
+}
 .sec-2{
-text-align: center
+text-align: center;
 }
 
 .sec-2 .head h2 {
@@ -237,9 +244,10 @@ margin-bottom: 1.5rem;
 
 .sec-2 ul {
 display: flex;
-margin: auto;
-width: 1400px;
+margin: 0 auto 4rem;
+width: 1200px;
 list-style: none;
+justify-content: space-between
 }
 
 .sec-2 ul h3 {
@@ -252,6 +260,25 @@ margin-bottom: 4rem;
 }
 
 .sec-2 ul li {
-width: 350px;
+width: 250px;
 }
 
+.sec-2 ul li img {
+width: 100px;
+}
+
+.sec-2 .content {
+border-bottom: 2px solid rgb(225,222,228);
+}
+
+.sec-2 .after-arrow {
+width: 7rem;
+height: 7rem;  
+position: relative;
+background: white;
+top: -3.5rem;
+margin: auto;
+border-radius: 50%;
+border-bottom: 2px solid rgb(225,222,228);
+
+}

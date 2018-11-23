@@ -3,12 +3,12 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#939FAD;stroke-width:20;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#939FAD;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st2{fill:none;stroke:#939FAD;stroke-width:20;stroke-linecap:round;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#939FAD;stroke-width:40;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#939FAD;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#939FAD;stroke-width:40;stroke-linecap:round;stroke-miterlimit:10;}
 </style>
-<circle class="st0" cx="201" cy="205" r="183"/>
-<line class="st1" x1="201" y1="87" x2="201" y2="304"/>
-<line class="st2" x1="201" y1="304" x2="288.5" y2="216.5"/>
-<line class="st2" x1="201" y1="304" x2="111" y2="214"/>
+<circle class="st0" cx="200" cy="200" r="178.5"/>
+<line class="st1" x1="200" y1="89.8" x2="200" y2="301.4"/>
+<line class="st2" x1="200" y1="301.4" x2="285.3" y2="216.1"/>
+<line class="st2" x1="200" y1="301.4" x2="112.2" y2="213.7"/>
 </svg>
