@@ -167,118 +167,235 @@ header nav>a span{
 }
 
 .sec-1 {
-text-align: center;
-position: relative;
+    position: relative;
 
 }
 
 .sec-1 .content{
     background: url(img/background_sec-1.jpg);
-padding: 0 25%;
-}
-
-.sec-1 h2 {
-margin-bottom: 2%;
+    padding: 0 25%;
 }
 
 .sec-1 p{
-margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 
 .sec-1 .contactus {
-position: absolute;   
-color: white;
-text-decoration: none;
-background: #861be2;
-border-radius: 0 5px 5px 0;
-right: 0;
-top: -15%;
-writing-mode: tb-rl;
-transform: rotate(180deg); 
+    position: absolute;   
+    color: white;
+    text-decoration: none;
+    background: #861be2;
+    border-radius: 0 5px 5px 0;
+    right: 0;
+    top: -15%;
+    writing-mode: tb-rl;
+    transform: rotate(180deg); 
 }
 
 .sec-1 .contactus p {
-padding: 0;
-margin: 2rem 0.6rem;;
+    color: white;
+    padding: 0;
+    margin: 2rem 0.6rem;;
 }
 
 .sec-1 .before-arrow{
-width: 7rem;
-height: 7rem;
-background: url(img/background_sec-1.jpg);
-position: relative;
-top: -3.5rem;
-margin: auto;
-border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    background: url(img/background_sec-1.jpg);
+    position: relative;
+    top: -3.5rem;
+    margin: auto;
+    border-radius: 50%;
 }
 
 .sec-1 img[alt="strelka"], .sec-2 img[alt="strelka"] {
-width: 2rem;
-margin-top: 2.5rem;
-} {
-width: 2rem;
-margin-top: 2.5rem;
+    width: 2rem;
+    margin-top: 2.5rem;
+
 }
 
 .sec-1 .after-arrow {
-width: 7rem;
-height: 7rem;
-background: rgb(40,200,198);   
-position: relative;
-top: -3.5rem;
-margin: auto;
-border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    background: rgb(40,200,198);   
+    position: relative;
+    top: -3.5rem;
+    margin: auto;
+    border-radius: 50%;
 }
 
 .sec-1 .content > img {
-position: relative;
-bottom: -5px;
+    position: relative;
+    bottom: -5px;
 }
-.sec-2{
-text-align: center;
+.sec-1, .sec-2, .sec-3{
+    text-align: center;
 }
 
-.sec-2 .head h2 {
-margin-bottom: 1.5rem;
+h2 {
+    margin-bottom: 1.5rem;
 }
 
 .sec-2 ul {
-display: flex;
-margin: 0 auto 4rem;
-width: 1200px;
-list-style: none;
-justify-content: space-between
+    display: flex;
+    margin: 0 auto 4rem;
+    width: 1200px;
+    list-style: none;
+    justify-content: space-between
 }
 
 .sec-2 ul h3 {
-text-transform: uppercase;
-margin: 2rem 0;
+    text-transform: uppercase;
+    margin: 2rem 0;
 }
 
 .sec-2 .head p {
-margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 
 .sec-2 ul li {
-width: 250px;
+    width: 250px;
+}
+
+.sec-2 ul li h3 {
+    height: 3rem;
 }
 
 .sec-2 ul li img {
-width: 100px;
+    width: 100px;
 }
 
 .sec-2 .content {
-border-bottom: 2px solid rgb(225,222,228);
+    border-bottom: 2px solid rgb(225,222,228);
+    background: white;
 }
 
 .sec-2 .after-arrow {
-width: 7rem;
-height: 7rem;  
-position: relative;
-background: white;
-top: -3.5rem;
-margin: auto;
-border-radius: 50%;
-border-bottom: 2px solid rgb(225,222,228);
+    width: 7rem;
+    height: 7rem;  
+    position: relative;
+    background: white;
+    top: -3.5rem;
+    margin: auto;
+    border-radius: 50%;
+    border-bottom: 2px solid rgb(225,222,228);
 
+}
+
+.sec-1 p, .sec-2 p, .sec-3 p {
+    color: #acacac;
+    font-weight: bold;
+}
+
+.sec-2{
+    background: rgb(247,248, 250);
+}
+
+.sec-3{
+    background: rgb(247,248, 250);
+}
+
+.sec-3 .head {
+    width: 70%;
+    margin: auto;
+}
+
+.sec-3 .choose-section {
+    display: flex;
+    list-style: none;
+    width: 40rem;
+    margin: 2rem auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(40, 200, 198);
+    border: 1px solid rgb(40, 200, 198);
+}
+
+.sec-3 .choose-section li {
+    width: 9rem;
+    padding:1rem 2rem;
+    cursor: pointer;
+}
+
+.sec-3 .choose-section li:first-child{
+    width: 13rem;
+}
+
+.sec-3 .choose-section li:hover {
+color: white;
+background: rgb(40, 200, 198);
+}
+
+.checked-item-sec-3 {
+    color: white;
+    background: rgb(40, 200, 198);
+}
+
+.sec-3 .section-items{
+    display: flex;
+    margin: auto;
+    list-style: none;
+    justify-content: center;
+}
+
+.sec-3 .section-items li{
+    height: 17rem;
+    margin-right: 10px;
+    margin-bottom: 6rem;
+}
+
+
+.sec-3 .section-items li>img {
+    display: block;
+    width: 25rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.sec-3 .section-items li a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: white;
+    border-radius: 0 0 5px 5px;
+}
+
+.sec-3 .section-items li a span {
+    line-height: 3.6rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.sec-3 .section-items li a img {
+    height: 1rem;
+    margin: 1.3rem 3rem 1.3rem 4rem;
+}
+
+.sec-4 {
+    background: url(img/background_sec-4.jpg);
+    background-size: cover;
+    padding: 20rem 0 18rem;
+}
+
+.sec-4 .content {
+display: flex;
+color: white;
+margin-left: 10%;
+
+align-items: flex-start;
+width: 40rem;
+}
+
+.sec-4 .content img {
+margin-right: 2rem;
+}
+
+.sec-4 .content h2 {
+font-size: 3rem;
+    line-height: 2.5rem;
+}
+
+.sec-4 .content h2 span {
+display: block;
+line-height: 2.5rem;
 }
