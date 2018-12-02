@@ -12,7 +12,6 @@ font-family: sans-serif;
 .first-screen {
     background: url(img/background_head.jpg) no-repeat;
     background-size: cover;
-    min-height: 480px;
     color: white;
 }
 
@@ -26,7 +25,7 @@ header span{
 }
 
  h1 {
-font-size: 3rem;
+    font-size: 3rem;
 }
 
 header nav {   
@@ -34,7 +33,7 @@ header nav {
     align-items: flex-start;
 }
 
-header nav a {
+header nav>a {
     display: flex;
     align-items: center;
     color: #fff;
@@ -42,7 +41,7 @@ header nav a {
  
 }
 
-header nav a img {   
+header nav>a img {   
     width: 1rem;
 }
 
@@ -53,8 +52,21 @@ header ul{
 
 }
 
+header nav ul li a {
+display: block;
+padding-bottom: 40px;
+}
+
+header nav ul li a:hover{
+    border-bottom: #8afcf7 solid 5px;
+}
+
+header nav ul li .selected{
+border-bottom: #8afcf7 solid 5px;
+}
+
 header img {
-    width: 3rem;
+    width: 100px;
     
 }
 
@@ -106,11 +118,10 @@ header nav>a span{
 .main-descr form {
     display: flex;
     position: relative;
-    width: 40rem;
-    height: 17rem;
+    width: 80vw;
+    margin-bottom: 17rem;
     flex-wrap: wrap;
-    
-    
+  
 }
 
 .main-descr form select, .main-descr form input[type="email"] {
@@ -121,6 +132,7 @@ header nav>a span{
     border-radius: 5px;
     font-size: 1rem;
     border: 0px;
+    margin-bottom: 1rem;
 }
 
 .main-descr form select{
@@ -148,7 +160,7 @@ header nav>a span{
     width: 1.5rem;
     height: 1.5rem;
     top: 1rem;
-    right: 7rem;
+    left: 31rem;
 }
 
 .main-descr form button[type="submit"] {
@@ -239,9 +251,17 @@ h2 {
 .sec-2 ul {
     display: flex;
     margin: 0 auto 4rem;
-    width: 1200px;
+    width: 80%;
     list-style: none;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+
+.sec-2 ul li {
+    width: 14rem;
+    margin-bottom: 1rem;
 }
 
 .sec-2 ul h3 {
@@ -251,10 +271,6 @@ h2 {
 
 .sec-2 .head p {
     margin-bottom: 4rem;
-}
-
-.sec-2 ul li {
-    width: 250px;
 }
 
 .sec-2 ul li h3 {
@@ -336,12 +352,15 @@ background: rgb(40, 200, 198);
     margin: auto;
     list-style: none;
     justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
 }
 
 .sec-3 .section-items li{
-    height: 17rem;
+    height: 300px;
     margin-right: 10px;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -378,24 +397,145 @@ background: rgb(40, 200, 198);
 }
 
 .sec-4 .content {
-display: flex;
-color: white;
-margin-left: 10%;
-
-align-items: flex-start;
-width: 40rem;
+    display: flex;
+    color: white;
+    margin-left: 10%;
+    align-items: flex-start;
+    width: 40rem;
 }
 
 .sec-4 .content img {
-margin-right: 2rem;
+    margin-right: 2rem;
 }
 
 .sec-4 .content h2 {
-font-size: 3rem;
+    font-size: 3rem;
     line-height: 2.5rem;
 }
 
 .sec-4 .content h2 span {
-display: block;
-line-height: 2.5rem;
+    display: block;
+    line-height: 2.5rem;
+}
+
+.sec-5 {
+    position: relative;
+}
+
+.sec-5 .arrow-up {
+    width: 3rem;
+    margin: 20rem 1.5rem;
+}
+
+.sec-5 .laptop {
+    position: absolute;
+    right: 10%;
+    top: -30rem;
+    width: 100vh;
+}
+
+footer .sharing {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .sharing img {
+    height: 2rem;
+    cursor: pointer;
+}
+
+footer .sharing img[alt="facebook"] {
+    margin-right: 10vw;   
+}
+
+footer .sharing a:first-child{
+margin-right: 10px;
+}
+
+footer {
+    font-size: 0.8rem;
+    color: #868686;
+    letter-spacing: 1px;  
+}
+
+footer .lists{
+    display: flex;
+    margin-top: 3rem;
+    width: 80%;
+    margin: 3rem auto 1rem;
+}
+
+footer .lists ul {
+    list-style: none;
+}
+
+footer .lists ul a {
+    text-decoration: none;
+    color: #868686;
+    
+}
+
+footer .lists ul:first-child {
+    margin-right: 5rem;
+}
+
+footer .lists ul:last-child {
+    margin-left: auto;
+}
+
+footer .lists ul p {
+    margin: 0;
+    line-height: 1rem;  
+}
+
+footer .lists ul li {
+    margin-bottom: 1rem;
+}
+
+footer>p {
+margin: 0 0 0 11rem;
+}
+
+@media all and (max-width: 1260px) {
+    .sec-2 ul {
+    width: 90%;
+    justify-content: center;   
+    }  
+    
+    .sec-2 ul li {
+    width: 300px;
+    }
+    
+    .main-descr form {
+    width: 33vw;
+    margin-bottom: 8rem;    
+    }
+    
+    .main-descr form::after{
+    top: 6rem;
+    left: 14rem;
+}
+    
+    .sec-5 {
+    display: none;
+    }
+    
+    .sharing {
+    margin-top: 20px;
+    }
+    
+}
+
+
+
+@media all and (max-width: 1000px) {
+    .sec-2 ul li {
+    width: 500px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .sec-2 ul li {
+    display: none;
+    }
 }
