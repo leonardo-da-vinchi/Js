@@ -5,15 +5,13 @@ box-sizing: border-box;
 }
 
 html {
-font-size: 20px;
+font-size: 18px;
 font-family: sans-serif;
 }
 
 .first-screen {
     background: url(img/background_head.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
-    min-height: 480px;
     color: white;
 }
 
@@ -27,7 +25,7 @@ header span{
 }
 
  h1 {
-font-size: 3rem;
+    font-size: 3rem;
 }
 
 header nav {   
@@ -35,7 +33,7 @@ header nav {
     align-items: flex-start;
 }
 
-header nav a {
+header nav>a {
     display: flex;
     align-items: center;
     color: #fff;
@@ -43,7 +41,7 @@ header nav a {
  
 }
 
-header nav a img {   
+header nav>a img {   
     width: 1rem;
 }
 
@@ -54,8 +52,21 @@ header ul{
 
 }
 
+header nav ul li a {
+display: block;
+padding-bottom: 40px;
+}
+
+header nav ul li a:hover{
+    border-bottom: #8afcf7 solid 5px;
+}
+
+header nav ul li .selected{
+border-bottom: #8afcf7 solid 5px;
+}
+
 header img {
-    width: 3rem;
+    width: 100px;
     
 }
 
@@ -88,6 +99,7 @@ header nav>a span{
 
 .main-descr {
     margin: 10% 12% 0;
+    padding-bottom: 7%;
 }
 
 
@@ -96,9 +108,9 @@ header nav>a span{
     
 }
 
-.main-descr p{
+ p{
    margin-bottom: 1rem;
-letter-spacing: 1px;
+   letter-spacing: 1px;
     line-height: 1.4rem;
     
 }
@@ -106,18 +118,21 @@ letter-spacing: 1px;
 .main-descr form {
     display: flex;
     position: relative;
-    width: 40rem;
-    
-    
+    width: 80vw;
+    margin-bottom: 17rem;
+    flex-wrap: wrap;
+  
 }
 
 .main-descr form select, .main-descr form input[type="email"] {
     width: 16rem;
+    height: 4rem;
     padding: 1rem;
     margin-right: 1.5rem;
     border-radius: 5px;
     font-size: 1rem;
     border: 0px;
+    margin-bottom: 1rem;
 }
 
 .main-descr form select{
@@ -145,11 +160,13 @@ letter-spacing: 1px;
     width: 1.5rem;
     height: 1.5rem;
     top: 1rem;
-    right: 7rem;
+    left: 31rem;
 }
 
 .main-descr form button[type="submit"] {
     border-radius: 5px;
+    height: 4rem;
+    cursor: pointer;
     background-color: #29c7c6;
     width: 4rem;
     padding: 1.2rem;
@@ -159,4 +176,367 @@ letter-spacing: 1px;
 
 .main-descr form button[type="submit"] img {
     height: 1.2rem;
+}
+
+.sec-1 {
+    position: relative;
+
+}
+
+.sec-1 .content{
+    background: url(img/background_sec-1.jpg);
+    padding: 0 25%;
+}
+
+.sec-1 p{
+    margin-bottom: 4rem;
+}
+
+.sec-1 .contactus {
+    position: absolute;   
+    color: white;
+    text-decoration: none;
+    background: #861be2;
+    border-radius: 0 5px 5px 0;
+    right: 0;
+    top: -15%;
+    writing-mode: tb-rl;
+    transform: rotate(180deg); 
+}
+
+.sec-1 .contactus p {
+    color: white;
+    padding: 0;
+    margin: 2rem 0.6rem;;
+}
+
+.sec-1 .before-arrow{
+    width: 7rem;
+    height: 7rem;
+    background: url(img/background_sec-1.jpg);
+    position: relative;
+    top: -3.5rem;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.sec-1 img[alt="strelka"], .sec-2 img[alt="strelka"] {
+    width: 2rem;
+    margin-top: 2.5rem;
+
+}
+
+.sec-1 .after-arrow {
+    width: 7rem;
+    height: 7rem;
+    background: rgb(40,200,198);   
+    position: relative;
+    top: -3.5rem;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.sec-1 .content > img {
+    position: relative;
+    bottom: -5px;
+}
+.sec-1, .sec-2, .sec-3{
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+.sec-2 ul {
+    display: flex;
+    margin: 0 auto 4rem;
+    width: 80%;
+    list-style: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+
+.sec-2 ul li {
+    width: 14rem;
+    margin-bottom: 1rem;
+}
+
+.sec-2 ul h3 {
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.sec-2 .head p {
+    margin-bottom: 4rem;
+}
+
+.sec-2 ul li h3 {
+    height: 3rem;
+}
+
+.sec-2 ul li img {
+    width: 100px;
+}
+
+.sec-2 .content {
+    border-bottom: 2px solid rgb(225,222,228);
+    background: white;
+}
+
+.sec-2 .after-arrow {
+    width: 7rem;
+    height: 7rem;  
+    position: relative;
+    background: white;
+    top: -3.5rem;
+    margin: auto;
+    border-radius: 50%;
+    border-bottom: 2px solid rgb(225,222,228);
+
+}
+
+.sec-1 p, .sec-2 p, .sec-3 p {
+    color: #acacac;
+    font-weight: bold;
+}
+
+.sec-2{
+    background: rgb(247,248, 250);
+}
+
+.sec-3{
+    background: rgb(247,248, 250);
+}
+
+.sec-3 .head {
+    width: 70%;
+    margin: auto;
+}
+
+.sec-3 .choose-section {
+    display: flex;
+    list-style: none;
+    width: 40rem;
+    margin: 2rem auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(40, 200, 198);
+    border: 1px solid rgb(40, 200, 198);
+}
+
+.sec-3 .choose-section li {
+    width: 9rem;
+    padding:1rem 2rem;
+    cursor: pointer;
+}
+
+.sec-3 .choose-section li:first-child{
+    width: 13rem;
+}
+
+.sec-3 .choose-section li:hover {
+color: white;
+background: rgb(40, 200, 198);
+}
+
+ .sec-3 .selected {
+    color: white;
+    background: rgb(40, 200, 198);
+}
+
+.sec-3 .section-items{
+    display: flex;
+    margin: auto;
+    list-style: none;
+    justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.sec-3 .section-items li{
+    height: 300px;
+    margin-right: 10px;
+    margin-bottom: 2rem;
+}
+
+
+.sec-3 .section-items li>img {
+    display: block;
+    width: 25rem;
+    height: 13.5rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.sec-3 .section-items li a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: white;
+    border-radius: 0 0 5px 5px;
+}
+
+.sec-3 .section-items li a span {
+    line-height: 3.6rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.sec-3 .section-items li a img {
+    height: 1rem;
+    margin: 1.3rem 3rem 1.3rem 4rem;
+}
+
+.sec-4 {
+    background: url(img/background_sec-4.jpg);
+    background-size: cover;
+    padding: 20rem 0 18rem;
+}
+
+.sec-4 .content {
+    display: flex;
+    color: white;
+    margin-left: 10%;
+    align-items: flex-start;
+    width: 40rem;
+}
+
+.sec-4 .content img {
+    margin-right: 2rem;
+}
+
+.sec-4 .content h2 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+
+.sec-4 .content h2 span {
+    display: block;
+    line-height: 2.5rem;
+}
+
+.sec-5 {
+    position: relative;
+}
+
+.sec-5 .arrow-up {
+    width: 3rem;
+    margin: 20rem 1.5rem;
+}
+
+.sec-5 .laptop {
+    position: absolute;
+    right: 10%;
+    top: -30rem;
+    width: 900px;
+}
+
+footer .sharing {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .sharing img {
+    height: 2rem;
+    cursor: pointer;
+}
+
+footer .sharing img[alt="facebook"] {
+    margin-right: 10vw;   
+}
+
+footer .sharing a:first-child{
+margin-right: 10px;
+}
+
+footer {
+    font-size: 0.8rem;
+    color: #868686;
+    letter-spacing: 1px;  
+}
+
+footer .lists{
+    display: flex;
+    margin-top: 3rem;
+    width: 80%;
+    margin: 3rem auto 1rem;
+}
+
+footer .lists ul {
+    list-style: none;
+}
+
+footer .lists ul a {
+    text-decoration: none;
+    color: #868686;
+    
+}
+
+footer .lists ul:first-child {
+    margin-right: 5rem;
+}
+
+footer .lists ul:last-child {
+    margin-left: auto;
+}
+
+footer .lists ul p {
+    margin: 0;
+    line-height: 1rem;  
+}
+
+footer .lists ul li {
+    margin-bottom: 1rem;
+}
+
+footer>p {
+margin: 0 0 0 11rem;
+}
+
+@media all and (max-width: 1260px) {
+    .sec-2 ul {
+    width: 90%;
+    justify-content: center;   
+    }  
+    
+    .sec-2 ul li {
+    width: 300px;
+    }
+    
+    .main-descr form {
+    width: 33vw;
+    margin-bottom: 8rem;    
+    }
+    
+    .main-descr form::after{
+    top: 6rem;
+    left: 14rem;
+}
+    
+    .sec-5 {
+    display: none;
+    }
+    
+    .sharing {
+    margin-top: 20px;
+    }
+    
+}
+
+
+
+@media all and (max-width: 1000px) {
+    .sec-2 ul li {
+    width: 500px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .sec-2 ul li {
+    display: none;
+    }
 }
