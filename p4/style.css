@@ -364,12 +364,19 @@ background: rgb(40, 200, 198);
 }
 
 
-.sec-3 .section-items li>img {
+.sec-3 .section-items .img-item {
     display: block;
     width: 25rem;
     height: 13.5rem;
     border-radius: 5px 5px 0 0;
+    transition: all 0.5s ease-out;
 }
+
+
+.sec-3 .section-items .img-item:hover {
+ transform: rotateY(180deg);
+}
+
 
 .sec-3 .section-items li a {
     display: flex;
