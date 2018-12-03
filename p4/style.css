@@ -342,7 +342,7 @@ color: white;
 background: rgb(40, 200, 198);
 }
 
-.checked-item-sec-3 {
+ .sec-3 .selected {
     color: white;
     background: rgb(40, 200, 198);
 }
@@ -367,6 +367,7 @@ background: rgb(40, 200, 198);
 .sec-3 .section-items li>img {
     display: block;
     width: 25rem;
+    height: 13.5rem;
     border-radius: 5px 5px 0 0;
 }
 
@@ -431,7 +432,7 @@ background: rgb(40, 200, 198);
     position: absolute;
     right: 10%;
     top: -30rem;
-    width: 100vh;
+    width: 900px;
 }
 
 footer .sharing {
