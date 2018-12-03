@@ -1,8 +1,6 @@
 let choozen = document.querySelector(".sec-3 .choose-section");
 let imgForChoozen = document.querySelectorAll(".sec-3 .section-items li>img");
 let textForChoozen = document.querySelectorAll(".sec-3 .section-items li a span");
-alert(textForChoozen[1].innerHTML);
-
 
 choozen.onclick = function(event) {
     this.querySelector(".selected").classList.remove("selected");
