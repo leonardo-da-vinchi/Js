@@ -35,14 +35,15 @@
         
         
         <form action="POST">
-            <select name="design_style" id="select-style">
-                <option value="0" selected disabled>Design style</option>
-                <option value="white">white</option>
-                <option value="dark">dark</option>
-                <option value="brown">brown</option>
-            </select>
+            <input type="text" list="styles" name="design_style" id="select-style" placeholder="Design style">
+            
             <input type="email" required placeholder="Email">
             <button type="submit"><img src="img/strelka.svg" alt=""></button>
+            <datalist id="styles">
+                    <option value="white">white</option>
+                    <option value="dark">dark</option>
+                    <option value="brown">brown</option>
+                      </datalist>
         </form>
         </section>
     </div>

@@ -55,6 +55,7 @@ header ul{
 header nav ul li a {
 display: block;
 padding-bottom: 40px;
+transition: border-bottom 0.5s;
 }
 
 header nav ul li a:hover{
@@ -124,7 +125,7 @@ header nav>a span{
   
 }
 
-.main-descr form select, .main-descr form input[type="email"] {
+.main-descr form input {
     width: 16rem;
     height: 4rem;
     padding: 1rem;
@@ -135,10 +136,6 @@ header nav>a span{
     margin-bottom: 1rem;
 }
 
-.main-descr form select{
-    cursor: pointer;
-}
-
  .main-descr form::before{
     content: "";
     display: table;
@@ -147,7 +144,7 @@ header nav>a span{
     position: absolute;
     width: 1.5rem;
     height: 1.5rem;
-    left: 14.2rem;
+    left: 14rem;
     top: 1rem;
 }
 
@@ -313,6 +310,7 @@ transition: all 1s ease;
     margin: auto;
     border-radius: 50%;
     border-bottom: 2px solid rgb(225,222,228);
+    cursor: pointer;
 
 }
 
@@ -432,6 +430,7 @@ background: rgb(40, 200, 198);
 
 .sec-4 .content img {
     margin-right: 2rem;
+    cursor: pointer;
 }
 
 .sec-4 .content h2 {

@@ -14,3 +14,29 @@ choozen.onclick = function(event) {
     }
     
 }
+
+function scrolling() {
+    if (this.pageYOffset >= checkElem) { 
+        setTimeout(function(){
+        this.scrollTo({
+        top: scrollvalue,
+        behavior: "smooth"
+        });
+        }, 500);
+        
+    }
+ }
+
+ let checkElem;
+ let scrollvalue;
+
+document.querySelector("form").addEventListener("input",function() {
+checkElem = this.getBoundingClientRect().bottom + pageYOffset;
+scrollvalue = checkElem - window.screen.height/2 + this.getBoundingClientRect().bottom/2 - this.getBoundingClientRect().top/2;
+if (this.children[0].value && !this.children[1].value || this.children[1].value && !this.children[0].value) {
+window.addEventListener("scroll", scrolling);
+}
+else {
+ window.removeEventListener("scroll", scrolling);   
+}
+}); 

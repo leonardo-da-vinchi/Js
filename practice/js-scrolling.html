@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        
+        form {
+            margin: 700px 0 50px 400px;
+        }
+
+        form input {
+            height: 200px;
+        }
+
+        div {
+            height: 1220px;
+            background: rgb(179, 255, 179);
+        }
+    </style>
+</head>
+<body>
+   <form action="">
+       <input type="text" placeholder="login">
+       <input type="text" placeholder="password">
+   </form>
+    <div>ololo</div>
+    
+    
+    <script>
+  
+     function scrolling() {
+        if (this.pageYOffset >= checkElem) { 
+            setTimeout(function(){
+            this.scrollTo({
+            top: scrollvalue,
+            behavior: "smooth"
+            });
+            }, 500);
+            
+        }
+     }
+
+     let checkElem;
+     let scrollvalue;
+
+document.querySelector("form").addEventListener("input",function() {
+    checkElem = this.getBoundingClientRect().bottom + pageYOffset;
+    scrollvalue = checkElem - window.screen.height/2 + this.getBoundingClientRect().bottom/2 - this.getBoundingClientRect().top/2;
+    if (this.children[0].value && !this.children[1].value || this.children[1].value && !this.children[0].value) {
+    window.addEventListener("scroll", scrolling);
+    }
+    else {
+     window.removeEventListener("scroll", scrolling);   
+    }
+    }); 
+</script>
+</body>
+</html>
