@@ -5,7 +5,7 @@ box-sizing: border-box;
 }
 
 html {
-font-size: 18px;
+font-size: 16px;
 font-family: sans-serif;
 }
 
@@ -218,6 +218,7 @@ header nav>a span{
     top: -3.5rem;
     margin: auto;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .sec-1 img[alt="strelka"], .sec-2 img[alt="strelka"] {
@@ -234,6 +235,7 @@ header nav>a span{
     top: -3.5rem;
     margin: auto;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .sec-1 .content > img {
@@ -279,6 +281,22 @@ h2 {
 
 .sec-2 ul li img {
     width: 100px;
+    transition: transform 1s;
+    cursor: pointer;
+    
+}
+
+.sec-2 ul li img:hover {
+    transform: rotate(360deg);
+}
+
+.sec-2 ul li p {
+transition: all 1s ease;
+}
+
+.sec-2 ul li img:hover+h3+p{
+    transform: scale(1.25);
+    color: black;
 }
 
 .sec-2 .content {
