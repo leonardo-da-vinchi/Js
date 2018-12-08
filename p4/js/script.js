@@ -47,7 +47,7 @@ let browserName = parser.getBrowser().name;
 let browserVersion = parser.getBrowser().version;
 let browsers = ["Opera", "Chrome",  "Firefox"];
 if (browsers.indexOf(browserName) != -1 && (+browserVersion.slice(0,2) > 40)) {
-    alert(browserName + "" + browserVersion);
+    alert(browserName);
 }
 else {
     let noneContent = document.querySelectorAll(".sec-3, .sec-4, .sec-5");
