@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    .big {
+        font-size: 150%;
+    }
+    .red {
+        color: red;
+    }
+
+    div {
+        display: inline-block;
+    }
+
+    img {
+        position: absolute;
+    }
+    </style>
+</head>
+<body>
+    <p>I love <mark>DOGS</mark></p>
+   <img src="../p4/img/sec-3-choose-4-img.jpg" alt="">
+   <div>
+       <p>"lolo"</p>
+   </div>
+    <p>I love <mark>DOGS</mark></p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // $("p").on("click", "mark", ()=>{alert(1)} );
+//         img = $("img");
+//         setInterval(() => {
+//             $('img').animate({
+//     'opacity': '+=0.1',
+//     'height': '+=12px',
+//     'width': '+=20px'
+// });
+//         }, 2000);
+
+
+
+// let $player = $("img");                  ПЕРЕДВИЖЕНИЕ ЭЛЕМЕНТА ПО ОКНУ С ПОМОЩЬЮ КЛАВИШ
+// $(document).keydown(function(event){
+//     // 82 - `r` - up
+//     // 68 - `d` - left
+//     // 70 - `f` - down
+//     // 71 - `g` - right
+//     switch (event.keyCode) {
+//         case 82:
+//             $player.stop('y', true);
+//             $player.animate({'top':'-=100'}, {queue:'y'}).dequeue('y');
+//             break;
+//         case 68:
+//             $player.stop('x', true);
+//             $player.animate({'left':'-=100'}, {queue:'x'}).dequeue('x');
+//             break;
+//         case 70:
+//             $player.stop('y', true);
+//             $player.animate({'top':'+=100'}, {queue:'y'}).dequeue('y');
+//             break;
+//         case 71:
+//             $player.stop('x', true);
+//             $player.animate({'left':'+=100'}, {queue:'x'}).dequeue('x');
+//             break;
+//     }
+    // event.stopImmediatePropagation();
+// })
+
+p = $("p")[0];
+p.innerHTML = "";
+$(window).on("keypress", (event) => {p.innerHTML += String.fromCharCode(event.charCode);});
+    </script>
+</body>
+</html> 
