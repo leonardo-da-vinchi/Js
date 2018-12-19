@@ -1,4 +1,4 @@
-let text;
+let text = "";
 let useText = "";
 
 function formatText(text) {
@@ -26,15 +26,13 @@ function formatText(text) {
 }
 
 function getUseText(text) {
-  let textClone = text;
-  let useText = "";
   let linePeekSum = 0;
   let searshPosition = 0;
-  while (linePeekSum <= 4) {
+
+  while (linePeekSum < 4) {
       linePeekSum++;
-      searshPosition += textClone.indexOf("/n");
-      textClone = textClone.slice(textClone.indexOf("/n") + 1, textClone.length);
+      searshPosition = text.indexOf("\n", searshPosition+1);
   }
-  useText = text.slice(0, searshPosition + 1);
+  useText = text.slice(0, searshPosition);
   return useText;
 }

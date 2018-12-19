@@ -1,6 +1,7 @@
-let funcForRandom = function(number, array, nowText) {
+let funcForRandom = function(array, nowText) {
+  let number;
     do {
         number = Math.floor(Math.random() * array.length);
-      } while (array[number] == nowText);
+      } while (formatText(array[number]) == nowText);
       return array[number];
 }

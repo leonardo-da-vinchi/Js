@@ -55,16 +55,25 @@ header .play-mode {
     margin: 10px auto 0;
 }
 
-textarea {
+.textarea {
     display: block;
     word-break: break-all;
     margin: 20px auto;
     font-size: 1.5vw;
-    width: 50%;
-    height: 160px;
+    width: 60%;
+    height: 20vh;
     resize: none;
-    padding: 13px 0 0 30px;
+    padding: 13px 0 0 4vw;
     letter-spacing: 1.5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    opacity: 0.6;
+}
+
+.textarea mark {
+    display: inline;
+    background: none;
+    border: 2px solid gray;
 }
 
 main header {
@@ -72,7 +81,7 @@ main header {
     display: flex;
     align-items: flex-end;
     width: 50%;
-    margin: 250px auto 0;
+    margin: 10% auto 0;
 }
 
 main header p:first-child{
@@ -84,10 +93,15 @@ main header p:first-child{
 main header p:nth-of-type(2){
     display: block;
     line-height: 1rem;
+    width: 250px;
 }
 
-main header p mark{
-  background: none;
+main header p mark {
+    background: none;
+    display: none;
+}
+
+main header p .speedValue{  
   margin-left: 12px;
   font-weight: bolder;
   font-size: 1.2rem;
@@ -97,3 +111,5 @@ main header p mark{
 main header span {
     align-self: center;
 }
+
+

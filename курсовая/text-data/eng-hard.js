@@ -38,8 +38,8 @@ The spread cohered. The spread hit. The spread severed legs. Three trunk section
       this.nowText = nowText;
     }
   
-    get getText() {
-      return funcForRandom(this.nowNumber, this.texts, this.nowText);
+    getText() {
+      return funcForRandom(this.texts, this.nowText);
     }
   
   

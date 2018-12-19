@@ -11,12 +11,12 @@ class EngEz {
       "wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound",
       "base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base"
       ]
-      this.nowNumber = Math.floor(Math.random() * this.texts.length);
+      this.nowNumber = 0;
       this.nowText = nowText;
     }
   
-    get getText() {
-      return funcForRandom(this.nowNumber, this.texts, this.nowText);
+    getText() {
+      return funcForRandom(this.texts, this.nowText);
     }
   
   

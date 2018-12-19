@@ -229,8 +229,8 @@ class RusHard {
       this.nowText = nowText;
     }
   
-    get getText() {
-      return funcForRandom(this.nowNumber, this.texts, this.nowText);
+    getText() {
+      return funcForRandom(this.texts, this.nowText);
     }
   
   
