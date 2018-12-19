@@ -2,16 +2,16 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 18px;
 }
 
-header {
+body>header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     text-transform: uppercase;
     width: 60%;
     margin: auto;
@@ -27,10 +27,11 @@ header {
 .logo a{
     display: flex;
     align-items: flex-end;
+    padding-bottom: 35px;
 
 }
 
-header a {
+a {
     color: black;
     text-decoration: none;
 
@@ -43,5 +44,56 @@ header a {
 
 header .play-mode {
     font-size: 1.3rem;
+    align-self: flex-start;
+    margin-top: 30px;
+}
 
+
+.play-mode img {
+    display: none;
+    width: 30px;
+    margin: 10px auto 0;
+}
+
+textarea {
+    display: block;
+    word-break: break-all;
+    margin: 20px auto;
+    font-size: 1.5vw;
+    width: 50%;
+    height: 160px;
+    resize: none;
+    padding: 13px 0 0 30px;
+    letter-spacing: 1.5px;
+}
+
+main header {
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    margin: 250px auto 0;
+}
+
+main header p:first-child{
+    margin-right: auto;
+    color: rgb(88, 88, 88);
+    
+}
+
+main header p:nth-of-type(2){
+    display: block;
+    line-height: 1rem;
+}
+
+main header p mark{
+  background: none;
+  margin-left: 12px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+main header span {
+    align-self: center;
 }

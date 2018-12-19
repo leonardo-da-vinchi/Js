@@ -12,11 +12,14 @@
         <div class="logo">
         <a href="#"><img src="img/logo.png" alt="logo">
         <h1>тренажёр скоропечатания</h1>
+        </a>
         </div>
 
         <div class="play-mode">
+            <div>
                 <p>режим</p>
                 <select name="playMode" id="playMode">
+                        <option value="nothing" selected disabled>Выберите режим</option>
                     <optgroup label = "Русский">
                     <option value="rus-ez">Русский - простой</option>
                     <option value="rus-norm">Русский - средний</option>
@@ -29,13 +32,31 @@
                     <option value="eng-hard">Английский - сложный</option>
                     </optgroup>
                 </select>
+                <img src="img/button-restart.jpg" alt="restart">
             </div>
-    </a> 
+        </div> 
     </header>
 
     <main>
-        
-    </main>
+        <header>
+            <p> </p>
+            <p>Скорость: <mark>032</mark> зн/мин</p>
+        </header>
+      <textarea cols="30" rows="10" readonly wrap="soft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam corrupti porro eveniet eaque saepe accusamus voluptas ipsa expedita, autem accusantium, voluptatum tempore vel fugit quisquam cum similique ut! Vitae, quasi.</textarea>  
+    </main> 
+    <script src="text-data/rus-ez.js"></script>
+    <script src="text-data/rus-norm.js"></script>
+    <script src="text-data/rus-hard.js"></script>
+    <script src="text-data/eng-ez.js"></script>
+    <script src="text-data/eng-norm.js"></script>
+    <script src="text-data/eng-hard.js"></script>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/OtherFuncs.js"></script>
+    <script src="js/choosingModeMenu.js"></script>
+    <script src="js/forText.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
-<!-- 6 9 13 -->
