@@ -1,5 +1,4 @@
-
-
+$(":after").css("display", "none");
 
 
 
