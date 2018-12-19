@@ -73,7 +73,7 @@ header .play-mode {
 .textarea mark {
     display: inline;
     background: none;
-    border: 2px solid gray;
+    border: 1px solid gray;
 }
 
 main header {
