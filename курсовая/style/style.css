@@ -21,7 +21,7 @@ body > header {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
-  width: 60%;
+  width: 1000px;
   margin: auto;
   font-weight: bold;
   margin-top: 1rem;
@@ -72,8 +72,8 @@ main header {
   font-weight: bold;
   display: flex;
   align-items: flex-end;
-  width: 50%;
-  margin: 10% auto 0;
+  width: 950px;
+  margin: 10vh auto 0;
 }
 
 main header p:first-child {
@@ -114,10 +114,9 @@ main header span {
   display: block;
   word-break: break-all;
   margin: 20px auto;
-  font-size: 1.5vw;
-  font-stretch: 5vw;
-  width: 60%;
-  height: 20vh;
+  font-size: 1.5rem;
+  width: 1000px;
+  height: 160px;
   resize: none;
   padding: 13px 0 0 4vw;
   letter-spacing: 2px;
@@ -154,7 +153,7 @@ main header span {
 .result {
     display: none;
   margin: auto;
-  width: 45%;
+  width: 950px;
 }
 
 .result > p,
@@ -261,9 +260,12 @@ main header span {
 .records-list {
     display: none;
     position: absolute;
-    border: 1px solid black;;
+    left: -3px;
+    border: 1px solid black;
+    background: white;
+    z-index: 10;
     padding: 20px 20px 20px;
-    width: 18%;
+    width: 350px;
 }
 
 .records-list p {

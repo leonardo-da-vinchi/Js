@@ -115,14 +115,53 @@ function textInputing(event) {
 function pauseOrBackTyping(event) {
   // backspace = 8, Esc = 27
   if (event.keyCode == 8) {
+    if (!checkPause) {
+      $(".inputField").css("opacity", "0.7");
+      startTyping = false;
+    checkPause = true;
+    $("main header p mark:nth-of-type(n+2)").css("display", "inline");
+    showingTypingCondition.html("Пауза(Esc)");
+    showingTypingCondition.css("cursor", "pointer");
+    showingTypingCondition.on("mouseenter", function() {
+      $(this).css("text-decoration", "underline");
+    });
+
+    showingTypingCondition.on("mouseleave", function() {
+      $(this).css("text-decoration", "none");
+    });
+    showingTypingCondition.on("click", function() {
+      pauseDeals();
+    });
+      idTime = setInterval(TimeGo, 1000);
+      idSpeed = setInterval(speedShowNow, 2000);
+    }
     if (checkFirstMistake && checkMistake) {
       checkFirstMistake = false;
       checkMistake = false;
     } else if (characterInBorder > 0) {
       characterInBorder--;
+      $(".inputField").css("opacity", "0.7");
+      startTyping = false;
+    checkPause = true;
+    $("main header p mark:nth-of-type(n+2)").css("display", "inline");
+    showingTypingCondition.html("Пауза(Esc)");
+    showingTypingCondition.css("cursor", "pointer");
+    showingTypingCondition.on("mouseenter", function() {
+      $(this).css("text-decoration", "underline");
+    });
+
+    showingTypingCondition.on("mouseleave", function() {
+      $(this).css("text-decoration", "none");
+    });
+    showingTypingCondition.on("click", function() {
+      pauseDeals();
+    });
+    
     } else if (characterInBorder < 0) {
       characterInBorder++;
     }
+
+
     $(".inputField").html(
       "<mark class='successText'>" +
         useText.slice(0, characterInBorder) +
@@ -155,3 +194,4 @@ function pauseDeals() {
   showingTypingCondition.html("Можете продолжать печатать");
   $("main header p mark:nth-of-type(n+2)").css("display", "none");
 }
+

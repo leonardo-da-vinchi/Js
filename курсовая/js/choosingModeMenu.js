@@ -41,7 +41,7 @@ selectMenu.on("change", function() {
   leftText = text.slice(useText.length, text.length); // определяем фрагменты текста, которые отобразим потом
   linefeedSum = searshAllEntry(text, "\n"); // узнаем количесво переходов на след строку в отфарматированном тексте
     useText= useText.split("\n").join(" \n");
-  $(".result").css("display", "none"); // делаем невидимым интерефейс, связанный с окончанием ввода
+  $(".result").css("display", "block"); // делаем невидимым интерефейс, связанный с окончанием ввода
   $(".inputField").css("opacity", "0.3"); 
   $(".inputField").html( // вставляем в поле для отображения текста наш текст, подготовленный для начала печати
     "<mark class='bordered'>" +
