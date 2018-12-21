@@ -1,22 +1,14 @@
-let firstPlayCheck = true;
-let nowPlayMode = "";
-let selectMenu = $("select");
+let firstPlayCheck = true; // проверка на самую первую игру в текущей сессии
+let nowPlayMode = ""; // перменная для хранения выбранного пользователем режима 
+let selectMenu = $("select"); //перменная, указываяющая на элемент страницы, в котором осуществляется выбор режима
 
+
+/**
+ * Назначаем обрабочик изменеия режима, при котором осуществляем необходимые нам действия
+ * 
+ */
 selectMenu.on("change", function() {
-  $("body").click(function() {
-    //   alert(0);
-      characterInBorder = useText.length-3;
-    });
-
-  // $(".inputField").mouseenter(function() {
-
-  //   });
-
-  //   $(".inputField").mouseleave(function() {
-  //     clearInterval(idTime);
-  //   });
-
-  switch ($(this).val()) {
+  switch ($(this).val()) { // получаем текст, соответвующий выбранному режиму
     case "rus-ez":
       text = new RusEz(funcForRandom, text).getText();
       break;
@@ -41,24 +33,24 @@ selectMenu.on("change", function() {
       text = new EngHard(funcForRandom, text).getText();
       break;
   }
-  nowPlayMode = $(this).val();
-  characterInBorder = 0;
+  nowPlayMode = $(this).val(); // получаем имя выбранного режима
+  characterInBorder = 0; // обнуляем перменные для процееса ввода
   time = 0;
-  text = formatText(text);
-  useText = getUseText(text);
-  leftText = text.slice(useText.length, text.length);
-  linefeedSum = searshAllEntry(text, "\n");
+  text = formatText(text); // форматирует полученный текст в удобный для обратботки и отображения
+  useText = getUseText(text); // определяем фрагменты текста, которые будут отображаться в данный момент
+  leftText = text.slice(useText.length, text.length); // определяем фрагменты текста, которые отобразим потом
+  linefeedSum = searshAllEntry(text, "\n"); // узнаем количесво переходов на след строку в отфарматированном тексте
     useText= useText.split("\n").join(" \n");
-  $(".result").css("display", "none");
-  $(".inputField").css("opacity", "0.3");
-  $(".inputField").html(
+  $(".result").css("display", "none"); // делаем невидимым интерефейс, связанный с окончанием ввода
+  $(".inputField").css("opacity", "0.3"); 
+  $(".inputField").html( // вставляем в поле для отображения текста наш текст, подготовленный для начала печати
     "<mark class='bordered'>" +
       useText[0] +
       "</mark>" +
       useText.slice(1, useText.length)
   );
-  $("main header p:first-child").html("Можете начинать печатать");
-  if (firstPlayCheck) {
+  $("main header p:first-child").html("Можете начинать печатать"); // делаем невидимым интерефейс, связанный с вводом
+  if (firstPlayCheck) { 
     $("main header p mark:first-child").css("display", "inline");
     $(".play-mode img").css("display", "block");
     $("body").on("keydown", pauseOrBackTyping);
@@ -68,5 +60,5 @@ selectMenu.on("change", function() {
     });
     firstPlayCheck = false;
   }
-  this.blur();
+  this.blur(); //убираем фокус с элемента, где осуществляли выбор режима, чтобы нажатия клавиш не провоцировался выбор
 });

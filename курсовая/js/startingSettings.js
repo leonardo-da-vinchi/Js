@@ -1,9 +1,11 @@
 
-// // setInterval(function(){console.log(++time)}, 1000);
-// // $(".statistic .now-record").text("oololo");
-    //   $(".statistic .time").text(getStringMinuteFromSec(69));
-// // alert(Math.ceil(1.1));
-   $(".records-show-button").click(function() {
+  /**
+   * Назначаем обработчик клика на кнопку "Рекорды", при котором  нам показывается список рекордов;
+   * назначаем на кнопку в виде крестика событие нажатия, при котором
+   * список закрывается
+   */
+  
+  $(".records-show-button").click(function() {
        $(this).css("display", "none");
        $(".records-list").css("display", "block");
        $(".button-close-list").click(function(){
@@ -13,10 +15,14 @@
    })
 
 
+/**
+ * Заполняет список рекордов в зависимости от хранящихся на localStarage
+ * данных о них
+ */   
 let writeRecords = function() {
-if (localStorage.getItem("rus-ez")) {
+if (localStorage.getItem("rus-ez")) { //если элемент не пустой, записываем его значение в таблицу
     $(".rus-ez").text(localStorage.getItem("rus-ez") + " зн/мин")
-} else {
+} else { // иначе указываем на отсутствие записи
     $(".rus-ez").text("отсутствует")
 }
 
@@ -54,27 +60,12 @@ if (localStorage.getItem("eng-hard")) {
 
 writeRecords();
 
+/**
+ * Назначем обработчик клика на кнопку "Очистить" в списке рекордов
+ * очищающая данные, хранящиеся на localStorage и обновляющая список рекордов
+ */
+
 $(".clear-records").click(function(){
     localStorage.clear();
     writeRecords();
 })
-
-// alert(localStorage.getItem("rus-ez")>2082);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

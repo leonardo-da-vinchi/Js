@@ -12,7 +12,6 @@ class EngNorm {
       "eT r h e wer e tobu ya rtt hi mof et h, edna t loyh d tnocu e vha nhutbeen idise isg md srbmetherof rohcfoem WtoMaen'wons et bir. heAs t ay hws imi vcb eT r h e wer e tobu ya rtt hi mof et h, edna t loyh d tnocu e vha nhutbeen idise isg md srbmetherof rohcfoem WtoMaen'wons et bir. heAs t ay hws imi vcb",
       "aLeta intth htg, oonM-e rc Wt h uela d yn aowkesd. r e idT t thebyuo day'iertoess axn tnd ss seraid, e hdh ea neb ilesg n nsloudremope thny a lsu u a, t e aLeta intth htg, oonM-e rc Wt h uela d yn aowkesd. r e idT t thebyuo day'iertoess axn tnd ss seraid, e hdh ea neb ilesg n nsloudremope thny a lsu u a, t e"
       ]
-      this.nowNumber = Math.floor(Math.random() * this.texts.length);
       this.nowText = nowText;
     }
   

@@ -1,10 +1,16 @@
-let characterInBorder = 0;
-let showingTypingCondition = $("main header p:first-child");
-let checkMistake = false;
-let checkFirstMistake = true;
-let checkPause = false;
-let startTyping = true;
+let characterInBorder = 0; //индекс текущей буквы
+let showingTypingCondition = $("main header p:first-child"); //элемент, хранящий состояние печатание(в процессе или на паузе)
+let checkMistake = false; //проверка наличия ошибки, запрещая ввод до её исправления
+let checkFirstMistake = true; //проверка наличия первой ошибки и при попытке её исправления не возвращается сразу на предыдущую букву
+let checkPause = false; //проверка нажатия паузы
+let startTyping = true; //проверка начала ввода в начале или после паузы
 
+/**
+ * 
+ * функция, срабатывающая при нажатии символьной клавиши и совершающая 
+ * много действий, связанных с проверками на ввод, запуском, остановкой учета и счета и т.д.
+ * @param {keypress} event хранит текущее событие
+ */
 function textInputing(event) {
   if (startTyping) {
     startTyping = false;
@@ -26,7 +32,7 @@ function textInputing(event) {
     idSpeed = setInterval(speedShowNow, 2000);
   }
 
-  if (
+  if ( // проверка правильности ввода
     String.fromCharCode(event.charCode) == useText[characterInBorder] &&
     !checkMistake
   ) {
@@ -41,28 +47,28 @@ function textInputing(event) {
       characterInBorder++;
     }
 
-    if (characterInBorder == useText.length) {
+    if (characterInBorder == useText.length) { // проверка на конец видимого фрагмента текста и замена на следующий
       replaceUseText();
     }
 
-    if (useText == "") {
-      clearInterval(idTime);
+    if (useText == "") { // проверка на конец ввода и вывод результата
+      clearInterval(idTime); // остановка счета времени
       $(".result").css("display", "block");
-      $(".result-speed").text(getSpeedTyping(text, time));
+      $(".result-speed").text(getSpeedTyping(text, time)); // вывод нужных в блоке результата данных
       $(".statistic .now-record").text(
         localStorage.getItem(nowPlayMode)
           ? localStorage.getItem(nowPlayMode) + " зн/мин"
           : "отсутствует"
       );
       $(".statistic .time").text(getStringMinuteFromSec(time));
-      if (getSpeedTyping(text, time) > localStorage.getItem(nowPlayMode)) {
+      if (getSpeedTyping(text, time) > +localStorage.getItem(nowPlayMode)) { // проверка на совершения рекорда и замена даннхы на localStorage
         $(".result-speed").addClass("result-speed-record");
         localStorage.setItem(nowPlayMode, getSpeedTyping(text, time));
         writeRecords();
       } else {
         $(".result-speed").removeClass("result-speed-record");
       }
-      startTyping = true;
+      startTyping = true; // обновляем перменные, отвечающие за проверку начала ввода
       firstPlayCheck = true;
       $(".inputField").html("");
       $("main header p:first-child").html("");
@@ -72,7 +78,7 @@ function textInputing(event) {
       return 0;
     }
 
-    $(".inputField").html(
+    $(".inputField").html( // выводим текст, отформатированный в соответствии с прогрессом ввода
       "<mark class='successText'>" +
         useText.slice(0, characterInBorder) +
         "</mark>" +
@@ -81,7 +87,7 @@ function textInputing(event) {
         "</mark>" +
         useText.slice(characterInBorder + 1, useText.length)
     );
-  } else {
+  } else { // при ошибке ввода подсвечиваем красным место ошибки, запрещаем дальшней ввод
     checkMistake = true;
     checkFirstMistake = true;
     $(".inputField").css("opacity", "0.7");
@@ -97,6 +103,15 @@ function textInputing(event) {
   }
 }
 
+
+/**
+ * Проверяет нажатие паузы кнопкой Esc или стирания напечатанного символа. 
+ * Осуществляет переход на текущий(при исправлении) или на
+ * предыдущий символ(при нажатии без предшествующей ошибки)
+ * по нажатию клавиши Backspace
+ * 
+ * @param {keydown} event хранит тип события
+ */
 function pauseOrBackTyping(event) {
   // backspace = 8, Esc = 27
   if (event.keyCode == 8) {
@@ -122,6 +137,11 @@ function pauseOrBackTyping(event) {
   }
 }
 
+
+/**
+ * Функция отключает часть интерфеса, связанного с процессом ввода,
+ * останавливает счет времени и учёт скорости.
+ */
 function pauseDeals() {
   clearInterval(idTime);
   clearInterval(idSpeed);

@@ -225,7 +225,6 @@ class RusHard {
 - Вы же всю жизнь воровали!
 - Воровал! Но делал это честно.`
       ]
-      this.nowNumber = Math.floor(Math.random() * this.texts.length);
       this.nowText = nowText;
     }
   

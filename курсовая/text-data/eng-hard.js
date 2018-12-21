@@ -34,7 +34,6 @@ On the third visit, he told me that his migraine had practically disappeared. He
 No gate opened. But with another blast of sound, something appeared between us and that flaming rod.
 The spread cohered. The spread hit. The spread severed legs. Three trunk sections detached and fell.`
       ]
-      this.nowNumber = Math.floor(Math.random() * this.texts.length);
       this.nowText = nowText;
     }
   

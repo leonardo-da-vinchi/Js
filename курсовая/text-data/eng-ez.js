@@ -11,7 +11,6 @@ class EngEz {
       "wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound wound",
       "base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base"
       ]
-      this.nowNumber = 0;
       this.nowText = nowText;
     }
   
