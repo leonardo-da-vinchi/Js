@@ -1,15 +1,61 @@
 let i = 10;
-let ulSticker = $("ul:nth-of-type(2)");
+let ulSticker = $("menu ul:not(:first-child)");
 let stickerClone;
 let innerStickers;
 let stickerSize = { width: "0", height: "0" };
 let stickerCoord = { top: "0", left: "0", bottom: "0", right: "0" };
-let heightPlus = $("section ul input[name='height-plus'");
-let heightMinus = $("section ul input[name='height-minus'");
-let widthPlus = $("section ul input[name='width-plus'");
-let widthMinus = $("section ul input[name='width-minus'");
+let heightPlus = $("section ul input[name='height-plus']");
+let heightMinus = $("section ul input[name='height-minus']");
+let widthPlus = $("section ul input[name='width-plus']");
+let widthMinus = $("section ul input[name='width-minus']");
+let print = $("section ul input[name='print']");
 let figureDrop = $("figure");
+let printField;
+let stickerButton = $("input[name='sticker']");
+let spoilerButton = $("input[name='spoiler']");
+let rimsButton = $("input[name='rims']");
+$("ul:nth-of-type(3)").css("display", "none");
+$("ul:nth-of-type(4)").css("display", "none");
 figureDrop.css("position", "relative");
+startSettingsForMainImage();
+
+
+stickerButton.click(() => {
+  $("ul:nth-of-type(2)").css("display", "block");
+  $("ul:nth-of-type(3)").css("display", "none");
+  $("ul:nth-of-type(4)").css("display", "none");
+})
+
+spoilerButton.click(() => {
+  $("ul:nth-of-type(2)").css("display", "none");
+  $("ul:nth-of-type(3)").css("display", "block");
+  $("ul:nth-of-type(4)").css("display", "none");
+})
+
+rimsButton.click(() => {
+  $("ul:nth-of-type(2)").css("display", "none");
+  $("ul:nth-of-type(3)").css("display", "none");
+  $("ul:nth-of-type(4)").css("display", "block");
+})
+
+
+
+print.click(() => {
+  printField = figureDrop.clone();
+  printField
+    .find("img")
+    .last()
+    .css({
+      width: getSize(figureDrop).width + "px",
+      height: getSize(figureDrop).height + "px"
+    });
+  $("body>*").css("display", "none");
+  $("body").append(printField);
+  $("body").load(window.print());
+  printField.remove();
+  $("body>*").css("display", "flex");
+  $("body>menu").css("display", "block");
+});
 ulSticker.find("img").draggable({
   scope: "firstStickers",
   helper: "clone",
@@ -159,20 +205,23 @@ figureDrop.droppable({
   }
 });
 
-figureDrop.find("img:last-child").click(function() {
-  innerStickers = $(this.parentNode).find("img:not(:last-child)");
-  innerStickers.draggable({ disabled: true });
-  innerStickers.css("border", "");
-  heightPlus.off("click");
-  heightMinus.off("click");
-  widthPlus.off("click");
-  widthMinus.off("click");
-  $("body").off("keydown");
-});
-
-// figureDrop.find("img:not(:last-child)").draggable();
+function startSettingsForMainImage() {
+  figureDrop.find("img:last-child").click(function() {
+    innerStickers = $(this.parentNode).find("img:not(:last-child)");
+    innerStickers.draggable({ disabled: true });
+    innerStickers.css("border", "");
+    heightPlus.off("click");
+    heightMinus.off("click");
+    widthPlus.off("click");
+    widthMinus.off("click");
+    $("body").off("keydown");
+  });
+}
 
 function getSize(elem) {
+  if (elem instanceof jQuery) {
+    elem = elem[0];
+  }
   let width =
     elem.getBoundingClientRect().right - elem.getBoundingClientRect().left;
   let height =
@@ -184,6 +233,9 @@ function getSize(elem) {
 }
 
 function getCoord(elem) {
+  if (elem instanceof jQuery) {
+    elem = elem[0];
+  }
   let top = elem.getBoundingClientRect().top + pageYOffset;
   let bottom = elem.getBoundingClientRect().bottom + pageYOffset;
   let right = elem.getBoundingClientRect().right + pageXOffset;
