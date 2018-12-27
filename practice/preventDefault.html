@@ -41,17 +41,33 @@
       //  $("html").mousedown((e) => {return false;});
       //  $("html").keydown((e) => {return false;})
 
-      let myEvent = new CustomEvent("userLogin", {
-        detail: {
-          username: "davidwalsh"
-        }
-      });
-      let a = document.getElementById("dd");
-      // a.on(myEvent, () => {alert(111)});
-      // a.dispatchEvent("userLogin");
-        a.dispatchEvent(myEvent);
-      let div = $("div");
-      console.log(div.width());
+      //  document.querySelector("html").onmousedown = (e) => {return false;};
+      //  document.querySelector("html").onkeydown = (e) => {return false;}
+
+      //  let event = $.Event("keydown", { keyCode: 116 });
+      //  $("html").trigger(event);
+
+      //  document.querySelector("html").innerHTML = "<p style='text-align: center; font-size: 72px; color: red; text-transform: uppercase'>влад лох</p>"
+
+      // let event = new Event("keydown", {
+      //   keyCode: 116
+      // });
+      // document.querySelector("html").dispatchEvent(event);
+
+    
+      // document.querySelector("html").requestFullScreen()
+      
+      // let myEvent = new CustomEvent("userLogin", {
+      //   detail: {
+      //     username: "davidwalsh"
+      //   }
+      // });
+      // let a = document.getElementById("dd");
+      // // a.on(myEvent, () => {alert(111)});
+      // // a.dispatchEvent("userLogin");
+      //   a.dispatchEvent(myEvent);
+      // let div = $("div");
+      // console.log(div.width());
       // let b = {};
       // console.log(typeof(b));
     </script>
