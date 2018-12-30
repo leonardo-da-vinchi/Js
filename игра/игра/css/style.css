@@ -5,14 +5,16 @@
 }
 
 html {
+    font-size: 1.5vw;
     min-height: 100vh;
-    background: linear-gradient(to top, rgb(0, 119, 255), rgb(221, 237, 255));
+    background: linear-gradient(to bottom, rgb(0, 119, 255), rgb(221, 237, 255));
 }
 
 h1{
-    font-size: 5rem;
-    margin-bottom: 15rem;
+    font-size: 4.5rem;
+    margin-bottom: 10rem;
     text-align: center;
+    color: white;
 }
 
 mark {
@@ -29,28 +31,29 @@ mark {
 .signin>*:not(h1){
     display: block;
     margin: 10px auto 40px;
-    font-weight: bold;
     text-align: center;
-    border: 3px solid gray;
+    border: 2px solid gray;
 }
 
 input[type="text"]{
     height: 3rem;
     width: 60%;
     font-size: 2rem;
-    color: black;
+    font-weight: bold;
 }
 
 button{
     opacity: 0.7;
-    height: 2rem;
-    width: 30%;
+    line-height: 2.5rem;
+    width: 12rem;
     font-size: 1.5rem;
 }
 
 button:active{
-    background: rgb(90, 90, 90);
+    box-shadow: none;
+    background: gray;
     color: white;
+    box-shadow: none;
 }
 
 .gaming, .records {
@@ -59,19 +62,23 @@ button:active{
 }
 
 .gaming {
-    width: 800px;
-    margin: 100px auto;
+    width: 60vw;
+    margin: 1rem auto;
     text-align: center;
     font-size: 2rem;
+    color: white;
+    font-weight: bold
 }
 
 .name mark{
     font-weight: bold;
+    color: white;
 }
 
 main {
-    width: 800px;
-    height: 600px;
+    /* width: 60vw; */
+    margin-top: 2rem;
+    height: 60vh;
     background: url(../img/background-gaming/1.jpg);
     display: flex;
     flex-direction: column;
