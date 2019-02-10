@@ -1,40 +1,14 @@
 <?php 
-// 4. Создайте класс FunnyFace – обеспечивающий поля и методы для обработки изображения
-//         (загрузка с клиента не требуется – просто указывается локальный путь к файлу),
-//         внешней консольной утилитой и возвращающее пользователю обработанное изображение
-//         (утилиту для win приложить).
+require 'source/classes/View.php';
+header('Content-Type: text/html; charset=utf-8');
 
+$page = new View('lol kek cheburek uzbek bishkek kumek parsec lulek');
+$page->render();
 
-header('Content-type:image/gif');
-
-$img = new FunnyFace('examples\example.png');
-
-$img->lookDown(); // Переворачивает изображение
-// $img->reMirror(); // Меняет горизонтально половинчатые куски изображения местами
-// $img->autoCorrect(); // Делает автокоренкцию цветовых уровней изображения
-                        // (чтобы эффект был заметен, сравните с исходным изображением)
-
-
-class FunnyFace 
-{
-    private $url;
-
-    public function __construct($url) {
-        $this->url = $url;
-    }
-
-    public function reMirror(){
-        passthru("convert  $this->url -roll -350  -");
-    }
-
-    public function lookDown() {
-        passthru("convert  $this->url -rotate 180  -");
-    }
-
-    public function autoCorrect() {
-        passthru("convert  $this->url -auto-level  -");
-    }
-
-}
-
-?>
+// 10.	Реализуйте класс View, который создаёт страницу для пользователя. 
+// В нём создать конструктор, принимающий данные для страницы
+//  (если они не переданы, то прерывается выполнение скрипта),
+// метод render создаёт страницу путём последовательного включения шапки, 
+// тела документа (переданный параметр данных из конструктора), и подвала. 
+// Причём статический контент находится в каталогах с соот. именем и 
+// метод должен работать в независимости от точки входа. 
