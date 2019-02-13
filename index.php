@@ -1,9 +1,36 @@
-<?php 
-require 'source/classes/View.php';
+<?php
+
+// $fileway = str_replace('\\', '/', substr(__DIR__, 0, 
+// strpos(__DIR__,'\\', 
+//  strpos(__DIR__, 'domains\\') + strlen('domains\\') + 1) + 1));
+
+$directory = explode('\\' , __DIR__);
+$directory = $directory[sizeof($directory)-1];
+switch ($directory) {
+    case 'studing':
+    $fileway = '';
+    break;
+    case 'source':
+    $fileway = '../';
+    break;
+    case 'header':
+    case 'footer':
+    $fileway = '../../';
+    break;
+    default:
+    die('Испольняесый файл находится в некорректной дериктории');
+}
+
+require $fileway.'source/classes/View.php';
 header('Content-Type: text/html; charset=utf-8');
 
 $page = new View('lol kek cheburek uzbek bishkek kumek parsec lulek');
-$page->render();
+$page->render($fileway);
+
+
+
+
+
 
 // 10.	Реализуйте класс View, который создаёт страницу для пользователя. 
 // В нём создать конструктор, принимающий данные для страницы

@@ -10,9 +10,9 @@ class View
         $this->content=$content;
     }
 
-    public function render() {
-        require 'source/header/header.php';
+    public function render($fileway) {
+        require $fileway.'source/header/header.php';
         echo "<main>$this->content</main>";
-        require 'source/footer/footer.php';
+        require $fileway.'source/footer/footer.php';
     }
 }
