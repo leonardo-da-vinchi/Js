@@ -3,11 +3,15 @@
 // $fileway = str_replace('\\', '/', substr(__DIR__, 0, 
 // strpos(__DIR__,'\\', 
 //  strpos(__DIR__, 'domains\\') + strlen('domains\\') + 1) + 1));
+$folderBegin = strpos(__FILE__, 'domains\\') + strlen('domains\\');
+$folderWork = substr(__FILE__, $folderBegin, 
+   strlen(__FILE__)-strpos(__FILE__, '\\',$folderBegin + 1)-3);
+
 
 $directory = explode('\\' , __DIR__);
 $directory = $directory[sizeof($directory)-1];
 switch ($directory) {
-    case 'studing':
+    case $folderWork:
     $fileway = '';
     break;
     case 'source':
