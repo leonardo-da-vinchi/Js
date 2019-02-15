@@ -1,0 +1,52 @@
+.page-film {
+  border: 1px solid gray;
+  border-left: none;
+  position: relative;
+}
+
+.page-film .poster {
+  width: 250px;
+  float: left;
+  margin-right: 10px;
+}
+
+.page-film header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.favorite-button {
+  width: 40px;
+  margin: 10px;
+  float: right;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.favorite-button:hover {
+  opacity: 1;
+}
+
+.page-film .info-movie {
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.page-film .info-movie p:last-of-type {
+  margin-top: 30px;
+}
+
+.back {
+  position: absolute;
+  left: -70px;
+  transform: rotate(180deg);
+  width: 50px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.back:hover {
+    opacity: 1;
+}
