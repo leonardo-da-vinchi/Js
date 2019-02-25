@@ -1,9 +1,9 @@
 <?php
-
+header('Content-Type: text/html; charset=utf-8');
+error_reporting(0);
 require_once 'static/Fileway.php';
 require_once FileWay::getFileway().'engine/classes/View.php';
 
-header('Content-Type: text/html; charset=utf-8');
 
 $page = new View(hgh);
 $page->render(FileWay::getFileway());
